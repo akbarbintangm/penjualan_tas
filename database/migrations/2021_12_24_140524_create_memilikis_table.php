@@ -14,7 +14,8 @@ class CreateMemilikisTable extends Migration
     public function up()
     {
         Schema::create('memilikis', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id_penjualan');
+            $table->bigInteger('kode_barang');
             $table->timestamps();
         });
     }
